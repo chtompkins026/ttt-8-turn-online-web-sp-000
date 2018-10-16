@@ -26,5 +26,25 @@ def turn(board)
   display_board(board)
 end
 
+#CHECK FOR EMPTY SPACE
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " " || board[index] == "")
+end
 
+#IS # CORRECT & SPACE EMPTY?
+def valid_move?(board, index)
+  if index.between?(0,8) && !position_taken?(board, index)
+      puts 'this is a valid move'
+    return true
+  else
+   return false
+  end
+end
+
+#MAKE MOVE ON BOARD
+def move(board, index, token)
+  board[index] = token
+  play(board)
+  
+end
 
