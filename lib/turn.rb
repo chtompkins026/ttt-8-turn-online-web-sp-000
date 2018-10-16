@@ -42,7 +42,7 @@ def valid_move?(board, index)
 end
 
 #MAKE MOVE ON BOARD
-def move(board, index, token)
+def move(board, index, token="X")
   index = index.to_i
   board[index] = token
 end
