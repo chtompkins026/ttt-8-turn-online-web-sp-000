@@ -45,8 +45,6 @@ end
 def move(board, index, token)
   index = index.to_i
   board[index] = token
-  play(board)
-  
 end
 
 def input_to_index(move)
