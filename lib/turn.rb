@@ -43,6 +43,7 @@ end
 
 #MAKE MOVE ON BOARD
 def move(board, index, token)
+  index = index.to_i
   board[index] = token
   play(board)
   
